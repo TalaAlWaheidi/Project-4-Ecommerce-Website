@@ -39,7 +39,7 @@ include('includs/header.php');
                 <div class="col-md-12">
                     <div class="card card-profile">
                         <div class="card-avatar">
-                            <a href="<?php echo $row['admin_image'];?>" target="_blank">
+                            <a href="<?php echo $row['admin_image']; ?>" target="_blank">
                                 <img class="img" src="<?php echo $row['admin_image']; ?>" />
                             </a>
                         </div>
@@ -130,16 +130,6 @@ include('includs/header.php');
                                             echo "</tr>";
                                         }
                                         ?>
-                                        <!-- <td>
-                                            <a class="nav-link btn btn-primary" href="./manage_admin.php">
-                                                <i class="material-icons ">create</i>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="nav-link btn btn-danger" href="./manage_admin.php">
-                                                <i class="material-icons ">delete_forever</i>
-                                            </a>
-                                        </td> -->
                                     </tr>
                                 </tbody>
                             </table>

@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Fashi Template">
-    <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Full Dynamic website ">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Get the best offers from the Elegant store in Jordan. Choose your favorite clothes and order them now! Logistics service. Production control.  home delivery at the lowest cost Most popular Types: clothes and accessories women, men and Kids ">
+    <meta property="og:description" content="Get the best offers from the Elegant store in Jordan. Choose your favorite clothes and order them now! Logistics service. Production control.  home delivery at the lowest cost Most popular Types: clothes and accessories women, men and Kids ">
+    <meta name="keywords" content="Ecommerce  , Ecommerce website, New arrival , Sale,End Year Sale , Christmas, Christmas clothes , Clothes , Accessories , Sweater Burgundy, Copper Watch,  Mens Fashion Watch,Girls Pinafore Dress, Cotton Warm Jacket, Fashion women outfit ,Fashion men outfit, Fashion Kids outfit,baby clothes, Baby boy winter outfits,Kids dress girl   ">
+    <meta name="author" content="Mohammad & Hamzeh& Lara , Dania , Tala , Aya ">
     <title>elegant Shop</title>
 
     <!-- Google Font -->
@@ -24,6 +27,50 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="apple-touch-icon" sizes="76x76" href="admin/img/apple-icon.png">
     <link rel="icon" type="image/png" href="admin/img/favicon.png">
+
+    <style>
+        .typewriter h2 {
+            overflow: hidden;
+            /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange;
+            /* The typwriter cursor */
+            white-space: nowrap;
+            /* Keeps the content on a single line */
+            margin: 0 auto;
+            /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em;
+            /* Adjust as needed */
+            animation:
+
+                typing 4.0s steps(80, end),
+                blink-caret 0.75s step-end infinite;
+            animation-iteration-count: 500;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: orange;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,37 +81,6 @@
 
     <!-- Header Section Begin -->
     <header class="header-section">
-        <div class="header-top">
-            <div class="container">
-                <div class="ht-left">
-                    <div class="mail-service">
-                        <i class=" fa fa-envelope"></i>
-                        elegant.shop@gmail.com
-                    </div>
-                    <div class="phone-service">
-                        <i class=" fa fa-phone"></i>
-                        +962 (77 _ 5500 _ 555)
-                    </div>
-                </div>
-                <div class="ht-right">
-                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
-                    <div class="lan-selector">
-                        <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                            <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
-                                data-title="English">English</option>
-                            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
-                                data-title="Bangladesh">German </option>
-                        </select>
-                    </div>
-                    <div class="top-social">
-                        <a href="#"><i class="ti-facebook"></i></a>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                        <a href="#"><i class="ti-linkedin"></i></a>
-                        <a href="#"><i class="ti-pinterest"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="container">
             <div class="inner-header">
                 <div class="row">
@@ -77,68 +93,47 @@
                     </div>
                     <div class="col-lg-7 col-md-7">
                         <div class="advanced-search">
-                            <button type="button" class="category-btn">All Categories</button>
+                            <button type="button" class="category-btn">Elegant Shop</button>
+
+
                             <div class="input-group">
                                 <input type="text" placeholder="What do you need?">
-                                <button type="button"><i class="ti-search"></i></button>
+                                <button type="submit" name="submit"><i class="ti-search"></i></button>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-lg-3 text-right col-md-3">
                         <ul class="nav-right">
-                            <li class="heart-icon">
+                            <!-- <li class="heart-icon">
                                 <a href="#">
                                     <i class="icon_heart_alt"></i>
                                     <span>1</span>
                                 </a>
-                            </li>
-                            <li class="cart-icon">
-                                <a href="#">
-                                    <i class="icon_bag_alt"></i>
-                                    <span>3</span>
-                                </a>
-                                <div class="cart-hover">
-                                    <div class="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="select-total">
-                                        <span>total:</span>
-                                        <h5>$120.00</h5>
-                                    </div>
-                                    <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart-price">$150.00</li>
+                            </li> -->
+
+                            <?php
+                            if (!empty($_SESSION['cart'])) {
+                                $qty = count($_SESSION['cart']); ?>
+                                <li class="cart-icon">
+                                    <a href="shop.php">
+                                        <i class="icon_bag_alt"></i>
+                                        <span><?php echo $qty ?></span>
+                                    </a>
+
+                                <?php } else { ?>
+                                <li class="heart-icon">
+                                    <a href="#">
+                                        <i class="icon_heart_alt"></i>
+                                        <span>1</span>
+                                    </a>
+                                </li>
+
+                            <?php }   ?>
+
+                            <?php if (isset($_SESSION['name'])) { ?>
+                                <li class="cart-price" style="color:#E7AB3C;">Welcome <?php echo $_SESSION['name'] ?></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -146,43 +141,37 @@
         </div>
         <div class="nav-item">
             <div class="container">
-                <div class="nav-depart">
-                    <div class="depart-btn">
-                        <i class="ti-menu"></i>
-                        <span>All departments</span>
-                        <ul class="depart-hover">
-                            <li class=""><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Kid's Clothing</a></li>
-                            <li><a href="#">Brand Fashion</a></li>
-                            <li><a href="#">Accessories/Shoes</a></li>
-                            <li><a href="#">Luxury Brands</a></li>
-                            <li><a href="#">Brand Outdoor Apparel</a></li>
-                        </ul>
-                    </div>
-                </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class=""><a href="./index.php">Home</a></li>
-                        <li><a href="./shop.php">Shop</a></li>
-                        <li><a href="#">Collection</a>
+                        <li><a href="#">Category</a>
                             <ul class="dropdown">
-                                <li><a href="#">Men's</a></li>
-                                <li><a href="#">Women's</a></li>
-                                <li><a href="#">Kid's</a></li>
+                                <?php
+                                $query  = "SELECT * FROM category";
+                                $result = mysqli_query($conn, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                    <li><a href="category.php?catname=<?php echo $row['category_name']; ?>"><?php echo $row['category_name']; ?>'s</a></li>
+                                <?php
+                                };
+                                ?>
                             </ul>
                         </li>
-                        <li><a href="./blog.php">Blog</a></li>
-                        <li><a href="./contact.php">Contact</a></li>
-                        <li><a href="#">Pages</a>
+                        <li><a href="./shop.php">Shop</a></li>
+                        <li><a href="./shopping-cart.php">Cart</a></li>
+                        <li><a href="./check-out.php">Checkout</a></li>
+                        <li><a href="./contact.php">Contact Us</a></li>
+                        <li><a href="#">Account</a>
                             <ul class="dropdown">
-                                <li><a href="./blog-details.php">Blog Details</a></li>
-                                <li><a href="./shopping-cart.php">Shopping Cart</a></li>
-                                <li><a href="./check-out.php">Checkout</a></li>
-                                <li><a href="./faq.php">Faq</a></li>
-                                <li><a href="./register.php">Register</a></li>
-                                <li><a href="./login.php">Login</a></li>
+                                <?php if (!isset($_SESSION['id'])) { ?>
+                                    <li><a href="./login.php">Log in</a></li>
+                                    <li><a href="./register.php">Register</a></li>
+                                <?php } else { ?>
+                                    <li><a href="./profile.php">Profile</a></li>
+                                    <li><a href="./logout.php">Log out</a></li>
+
+                                <?php } ?>
+
                             </ul>
                         </li>
                     </ul>

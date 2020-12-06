@@ -58,10 +58,10 @@
                     <div class="footer-widget">
                         <h5>Information</h5>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
+                            <!-- <li><a href="#">About Us</a></li> -->
+                            <li><a href="shopping-cart.php">Checkout</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <!-- <li><a href="#">Serivius</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -69,10 +69,10 @@
                     <div class="footer-widget">
                         <h5>My Account</h5>
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="profile.php">My Account</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="shopping-cart.php">Shopping Cart</a></li>
+                            <li><a href="shop.php">Shop</a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                         <h5>Join Our Newsletter Now</h5>
                         <p>Get E-mail updates about our latest shop and special offers.</p>
                         <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
+                            <input type="text" placeholder="Enter Your Mail" name='subsemail' >
+                            <button type="submit">Subscribe</button>
                         </form>
                     </div>
                 </div>

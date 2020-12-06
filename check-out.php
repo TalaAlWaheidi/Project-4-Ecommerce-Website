@@ -1,6 +1,7 @@
 <?php
 include('connection.php');
 include('header.php');
+include("customersession.php");
 ?>
 <!-- Breadcrumb Section Begin -->
 <div class="breacrumb-section">
@@ -21,11 +22,11 @@ include('header.php');
 <!-- Shopping Cart Section Begin -->
 <section class="checkout-section spad">
     <div class="container">
-        <form action="#" class="checkout-form">
+        <form action="orderhandler.php" method="POST" class="checkout-form">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="checkout-content">
-                        <a href="#" class="content-btn">Click Here To Login</a>
+                        <a href="login.php" class="content-btn">Click Here To Login</a>
                     </div>
                     <h4>Biiling Details</h4>
                     <div class="row">
@@ -82,37 +83,50 @@ include('header.php');
                         <input type="text" placeholder="Enter Your Coupon Code">
                     </div>
                     <div class="place-order">
+                        <?php 
+                            $total=0;
+                            if (isset($_SESSION['cart'])) {
+                                
+                                foreach ($_SESSION['cart'] as $key => $value) {
+                                
+                                $total = $total + ($value["item_quantity"] * $value["item_price"]);  
+
+                                ?>
                         <h4>Your Order</h4>
                         <div class="order-total">
                             <ul class="order-table">
                                 <li>Product <span>Total</span></li>
-                                <li class="fw-normal">Combination x 1 <span>$60.00</span></li>
-                                <li class="fw-normal">Combination x 1 <span>$60.00</span></li>
-                                <li class="fw-normal">Combination x 1 <span>$120.00</span></li>
-                                <li class="fw-normal">Subtotal <span>$240.00</span></li>
-                                <li class="total-price">Total <span>$240.00</span></li>
+                                <li class="fw-normal"><?php echo $value['item_name'] ?><span>$<?php echo $value['item_price'] ?></span></li>
+                               
+                                <li class="fw-normal">Subtotal <span>$<?php echo $total = $total + ($value["item_quantity"] * $value["item_price"]) ?></span></li>
+                                <li class="total-price">Total <span>$<?php echo $total = $total + ($value["item_quantity"] * $value["item_price"]) ?></span></li>
                             </ul>
                             <div class="payment-check">
                                 <div class="pc-item">
                                     <label for="pc-check">
-                                        Cheque Payment
+                                    Cash on delivery
                                         <input type="checkbox" id="pc-check">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <div class="pc-item">
+                                <!-- <div class="pc-item">
                                     <label for="pc-paypal">
                                         Paypal
                                         <input type="checkbox" id="pc-paypal">
                                         <span class="checkmark"></span>
                                     </label>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="order-btn">
+                                <input type="hidden" name="total" value="<?php echo $total ?>">
                                 <button type="submit" class="site-btn place-btn">Place Order</button>
                             </div>
                         </div>
                     </div>
+
+                    <?php  }
+                        }  ?>
+
                 </div>
             </div>
         </form>

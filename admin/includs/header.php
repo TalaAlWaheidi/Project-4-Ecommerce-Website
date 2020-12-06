@@ -1,3 +1,16 @@
+
+<?php 
+ob_start();
+session_start();
+// if(isset($_SESSION['superadmin'])){
+//     header("location:./index.php");
+// }elseif(isset($_SESSION['admin'])){
+//     header("location:./manage_user.php");
+// }else{
+//     header("location:../login.php");
+// };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +46,7 @@
                 </a></div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
+                <?php if(isset($_SESSION['superadmin'])){?>
                     <li class="nav-item">
                         <a class="nav-link" href="./index.php">
                             <i class="material-icons">person</i>
@@ -58,11 +72,63 @@
                         </a>
                     </li>
                     <li class="nav-item ">
+                        <a class="nav-link" href="./submanage_category.php">
+                            <i class="material-icons">subtitles</i>
+                            <p>Manage subcategory</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link" href="./manage_product.php">
                             <i class="material-icons">checkroom</i>
                             <p>Manage Products</p>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./logout.php">
+                            <i class="material-icons">login</i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
+                    <?php }
+                    elseif(isset($_SESSION['admin'])){ ?>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./manage_user.php">
+                            <i class="material-icons">person_add_alt_1</i>
+                            <p>Manage Users</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./manage_category.php">
+                            <i class="material-icons">content_paste</i>
+                            <p>Manage Category</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./submanage_category.php">
+                            <i class="material-icons">subtitles</i>
+                            <p>Manage subcategory</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./manage_product.php">
+                            <i class="material-icons">checkroom</i>
+                            <p>Manage Products</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./logout.php">
+                            <i class="material-icons">login</i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
+                    <?php }else{ ?>
+                                            <li class="nav-item ">
+                        <a class="nav-link" href="./logout.php">
+                            <i class="material-icons">login</i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -104,5 +170,3 @@
                     </div>
                 </div>
             </nav>
-            <!-- </div>
-</div> -->
